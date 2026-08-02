@@ -1,0 +1,252 @@
+/* ---------- General ---------- */
+
+body{
+
+    margin:0;
+
+    background:#F4F5F7;
+
+    font-family:"Segoe UI",Tahoma,sans-serif;
+
+    color:#2F2F2F;
+
+}
+
+/* ---------- Navigation ---------- */
+
+.navbar{
+
+    background:#FFFFFF;
+
+    border-bottom:1px solid #D8DDE3;
+
+    padding:14px 0;
+
+}
+
+.navbar-brand{
+
+    font-size:22px;
+
+    font-weight:600;
+
+    color:#2C5A85 !important;
+
+}
+
+.nav-link{
+
+    color:#444 !important;
+
+    margin-left:20px;
+
+    font-size:15px;
+
+}
+
+.nav-link:hover{
+
+    color:#2C5A85 !important;
+
+}
+
+/* ---------- Headings ---------- */
+
+h1{
+
+    font-size:34px;
+
+    font-weight:600;
+
+    margin-bottom:18px;
+
+}
+
+h2{
+
+    font-size:24px;
+
+    margin-bottom:18px;
+
+}
+
+h3{
+
+    font-size:20px;
+
+}
+
+/* ---------- Paragraph ---------- */
+
+p{
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    color:#555;
+
+}
+
+/* ---------- Cards ---------- */
+
+.card{
+
+    background:white;
+
+    border:1px solid #D8DDE3;
+
+    border-radius:8px;
+
+    padding:25px;
+
+    box-shadow:0 2px 5px rgba(0,0,0,.05);
+
+}
+
+/* ---------- Button ---------- */
+
+.btn-custom{
+
+    background:#2C5A85;
+
+    color:white;
+
+    padding:10px 20px;
+
+    border:none;
+
+    border-radius:5px;
+
+}
+
+.btn-custom:hover{
+
+    background:#23496C;
+
+    color:white;
+
+}
+
+/* ---------- Footer ---------- */
+
+footer{
+
+    background:white;
+
+    border-top:1px solid #D8DDE3;
+
+    padding:25px 0;
+
+    text-align:center;
+
+}
+
+footer p{
+
+    margin:4px;
+
+    font-size:14px;
+
+}
+.card h3{
+
+    font-size:18px;
+
+    color:#2C5A85;
+
+    margin-bottom:10px;
+
+}
+
+.card p{
+
+    margin:0;
+
+}
+
+.btn-custom{
+
+    text-decoration:none;
+
+    display:inline-block;
+
+}
+
+main{
+
+    min-height:70vh;
+
+}
+/* Form */
+
+.form-label{
+    font-weight:600;
+    font-size:14px;
+    color:#444;
+}
+
+.form-control,
+.form-select{
+    border:1px solid #ced4da;
+    border-radius:5px;
+    font-size:15px;
+    padding:9px 12px;
+}
+
+.form-control:focus,
+.form-select:focus{
+    border-color:#2C5A85;
+    box-shadow:none;
+}
+
+.card h2{
+    font-size:20px;
+    color:#2C5A85;
+    margin-bottom:20px;
+    padding-bottom:8px;
+    border-bottom:1px solid #e5e5e5;
+}
+/* ==========================
+   Result Page
+========================== */
+
+.result-card{
+
+    padding:30px;
+
+}
+
+.result-table{
+
+    margin-bottom:0;
+
+}
+
+.result-table th{
+
+    width:35%;
+
+    color:#2C5A85;
+
+    font-weight:600;
+
+}
+
+.status{
+
+    font-weight:600;
+
+}
+
+.stay{
+
+    color:#1E7E34;
+
+}
+
+.churn{
+
+    color:#C0392B;
+
+}

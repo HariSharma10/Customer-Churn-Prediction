@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <div class="card shadow-sm border-0">
+        <div class="card-body p-5">
+
+            <h2 class="text-center mb-4">About This Project</h2>
+
+            <p class="text-muted text-center">
+                The Customer Churn Prediction System is a machine learning web application
+                developed to predict whether a telecom customer is likely to continue using
+                the service or discontinue it. The prediction is based on customer details,
+                subscribed services, contract information, and billing history.
+            </p>
+
+            <hr class="my-4">
+
+            <div class="row">
+
+                <div class="col-md-6 mb-4">
+
+                    <h4>Project Objective</h4>
+
+                    <p>
+                        The main objective of this project is to help telecom companies
+                        identify customers who may leave their services in advance.
+                        Early prediction enables businesses to take appropriate actions
+                        such as offering better plans, discounts, or improved customer
+                        support to increase customer retention.
+                    </p>
+
+                </div>
+
+                <div class="col-md-6 mb-4">
+
+                    <h4>Machine Learning Model</h4>
+
+                    <p>
+                        This project uses the <strong>Logistic Regression</strong>
+                        classification algorithm. The model was trained on the
+                        Telco Customer Churn dataset after preprocessing,
+                        label encoding, and feature scaling.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <h4>Dataset Information</h4>
+
+                    <ul>
+                        <li>Dataset: Telco Customer Churn</li>
+                        <li>Total Features Used: 19</li>
+                        <li>Target Variable: Churn</li>
+                        <li>Customer Demographics</li>
+                        <li>Internet & Phone Services</li>
+                        <li>Contract Information</li>
+                        <li>Billing Details</li>
+                    </ul>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <h4>Technologies Used</h4>
+
+                    <ul>
+                        <li>Python</li>
+                        <li>Flask</li>
+                        <li>Pandas</li>
+                        <li>NumPy</li>
+                        <li>Scikit-learn</li>
+                        <li>Joblib</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>Bootstrap 5</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <hr class="my-4">
+
+            <h4>Project Workflow</h4>
+
+            <ol>
+                <li>Load and clean the customer dataset.</li>
+                <li>Encode categorical features.</li>
+                <li>Scale numerical features.</li>
+                <li>Train the Logistic Regression model.</li>
+                <li>Save the trained model and preprocessing objects.</li>
+                <li>Build a Flask web application.</li>
+                <li>Accept customer details through the web interface.</li>
+                <li>Predict customer churn and display the confidence score.</li>
+            </ol>
+
+            <hr class="my-4">
+
+            <div class="text-center">
+
+                <h4>Developer</h4>
+
+                <p class="mb-1"><strong>Hari Sharma</strong></p>
+
+                <p class="mb-1">
+                    B.Tech Computer Science Engineering
+                </p>
+
+                <p class="mb-1">
+                    Geeta University
+                </p>
+
+                <p class="text-muted">
+                    Customer Churn Prediction using Machine Learning and Flask
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

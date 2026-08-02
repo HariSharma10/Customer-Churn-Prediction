@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Prediction Result</h1>
+
+<p>
+    The machine learning model has analyzed the customer information and generated the following prediction.
+</p>
+
+<div class="card result-card">
+
+    <table class="table result-table">
+
+        <tr>
+            <th width="35%">Customer Status</th>
+            <td>
+                {% if color == "success" %}
+                    <span class="status stay">{{ prediction }}</span>
+                {% else %}
+                    <span class="status churn">{{ prediction }}</span>
+                {% endif %}
+            </td>
+        </tr>
+
+        <tr>
+            <th>Prediction Confidence</th>
+            <td>{{ probability }}%</td>
+        </tr>
+
+        <tr>
+            <th>Machine Learning Model</th>
+            <td>Logistic Regression</td>
+        </tr>
+
+    </table>
+
+</div>
+
+<div class="card mt-4">
+
+    <h2>Recommendation</h2>
+
+    {% if color == "success" %}
+
+    <p>
+        The customer is predicted to remain with the company. Continue providing
+        good service and regular customer engagement to maintain satisfaction.
+    </p>
+
+    {% else %}
+
+    <p>
+        The customer has a higher probability of leaving the service.
+        Consider offering promotional plans, improving customer support,
+        or providing personalized retention offers.
+    </p>
+
+    {% endif %}
+
+</div>
+
+<div class="mt-4">
+
+    <a href="/predict" class="btn btn-custom">
+        Predict Another Customer
+    </a>
+
+</div>
+
+{% endblock %}

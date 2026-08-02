@@ -1,0 +1,264 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+    <div class="col-lg-8">
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-body p-4">
+
+                <h2 class="mb-4 text-center">
+                    Customer Churn Prediction
+                </h2>
+
+                <form action="/result" method="POST">
+
+                    <!-- Gender -->
+
+                    <div class="mb-3">
+                        <label class="form-label">Gender</label>
+                        <select class="form-select" name="Gender" required>
+                            <option value="">Select</option>
+                            <option>Female</option>
+                            <option>Male</option>
+                        </select>
+                    </div>
+
+                    <!-- Senior Citizen -->
+
+                    <div class="mb-3">
+                        <label class="form-label">Senior Citizen</label>
+                        <select class="form-select" name="Senior Citizen" required>
+                            <option value="">Select</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Partner -->
+
+                    <div class="mb-3">
+                        <label class="form-label">Partner</label>
+                        <select class="form-select" name="Partner" required>
+                            <option value="">Select</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Dependents -->
+
+                    <div class="mb-3">
+                        <label class="form-label">Dependents</label>
+                        <select class="form-select" name="Dependents" required>
+                            <option value="">Select</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Tenure -->
+
+                    <div class="mb-3">
+                        <label class="form-label">Tenure Months</label>
+                        <input
+                            type="number"
+                            class="form-control"
+                            name="Tenure Months"
+                            min="0"
+                            max="72"
+                            required>
+                    </div>
+
+                    <!-- Phone Service -->
+
+                    <div class="mb-3">
+                        <label class="form-label">Phone Service</label>
+                        <select class="form-select" name="Phone Service" required>
+                            <option value="">Select</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Multiple Lines -->
+
+                    <div class="mb-3">
+                        <label class="form-label">Multiple Lines</label>
+                        <select class="form-select" name="Multiple Lines" required>
+                            <option value="">Select</option>
+                            <option>No</option>
+                            <option>No phone service</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Internet Service -->
+
+                    <div class="mb-3">
+                        <label class="form-label">Internet Service</label>
+                        <select class="form-select" name="Internet Service" required>
+                            <option value="">Select</option>
+                            <option>DSL</option>
+                            <option>Fiber optic</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+
+                    <!-- Online Security -->
+
+                    <div class="mb-3">
+                        <label class="form-label">Online Security</label>
+                        <select class="form-select" name="Online Security" required>
+                            <option value="">Select</option>
+                            <option>No</option>
+                            <option>No internet service</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Online Backup -->
+
+                    <div class="mb-3">
+                        <label class="form-label">Online Backup</label>
+                        <select class="form-select" name="Online Backup" required>
+                            <option value="">Select</option>
+                            <option>No</option>
+                            <option>No internet service</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+                                        <!-- Device Protection -->
+
+                    <div class="mb-3">
+                        <label class="form-label">Device Protection</label>
+                        <select class="form-select" name="Device Protection" required>
+                            <option value="">Select</option>
+                            <option>No</option>
+                            <option>No internet service</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Tech Support -->
+
+                    <div class="mb-3">
+                        <label class="form-label">Tech Support</label>
+                        <select class="form-select" name="Tech Support" required>
+                            <option value="">Select</option>
+                            <option>No</option>
+                            <option>No internet service</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Streaming TV -->
+
+                    <div class="mb-3">
+                        <label class="form-label">Streaming TV</label>
+                        <select class="form-select" name="Streaming TV" required>
+                            <option value="">Select</option>
+                            <option>No</option>
+                            <option>No internet service</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Streaming Movies -->
+
+                    <div class="mb-3">
+                        <label class="form-label">Streaming Movies</label>
+                        <select class="form-select" name="Streaming Movies" required>
+                            <option value="">Select</option>
+                            <option>No</option>
+                            <option>No internet service</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Contract -->
+
+                    <div class="mb-3">
+                        <label class="form-label">Contract</label>
+                        <select class="form-select" name="Contract" required>
+                            <option value="">Select</option>
+                            <option>Month-to-month</option>
+                            <option>One year</option>
+                            <option>Two year</option>
+                        </select>
+                    </div>
+
+                    <!-- Paperless Billing -->
+
+                    <div class="mb-3">
+                        <label class="form-label">Paperless Billing</label>
+                        <select class="form-select" name="Paperless Billing" required>
+                            <option value="">Select</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+
+                    <!-- Payment Method -->
+
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <select class="form-select" name="Payment Method" required>
+                            <option value="">Select</option>
+                            <option>Bank transfer (automatic)</option>
+                            <option>Credit card (automatic)</option>
+                            <option>Electronic check</option>
+                            <option>Mailed check</option>
+                        </select>
+                    </div>
+
+                    <!-- Monthly Charges -->
+
+                    <div class="mb-3">
+                        <label class="form-label">Monthly Charges</label>
+                        <input
+                            type="number"
+                            step="0.01"
+                            class="form-control"
+                            name="Monthly Charges"
+                            placeholder="e.g. 75.50"
+                            required>
+                    </div>
+
+                    <!-- Total Charges -->
+
+                    <div class="mb-4">
+                        <label class="form-label">Total Charges</label>
+                        <input
+                            type="number"
+                            step="0.01"
+                            class="form-control"
+                            name="Total Charges"
+                            placeholder="e.g. 2500.75"
+                            required>
+                    </div>
+
+                    <!-- Submit Button -->
+
+                    <div class="text-center">
+
+                        <button type="submit" class="btn btn-primary px-5 py-2">
+                            Predict Churn
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
