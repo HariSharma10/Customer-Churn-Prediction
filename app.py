@@ -88,7 +88,7 @@ def result():
         )
 
     except Exception as e:
-        return f"Error : {e}"
+      return render_template("error.html", error=str(e)), 400
 
 
 if __name__ == "__main__":

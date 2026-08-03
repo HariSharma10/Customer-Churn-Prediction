@@ -10,85 +10,79 @@
 
             <div class="card-body p-4">
 
-                <h2 class="mb-4 text-center">
+                <h2 class="mb-3 text-center">
                     Customer Churn Prediction
                 </h2>
 
+                <div class="d-flex gap-2 justify-content-center mb-4 flex-wrap">
+                    <button type="button" class="btn btn-outline-danger btn-sm" onclick="fillSample('churn')">
+                        Try High-Risk Customer
+                    </button>
+                    <button type="button" class="btn btn-outline-success btn-sm" onclick="fillSample('loyal')">
+                        Try Loyal Customer
+                    </button>
+                </div>
+
                 <form action="/result" method="POST">
 
-                    <!-- Gender -->
+                    <h5 class="text-primary border-bottom pb-2 mb-3">Customer Profile</h5>
 
                     <div class="mb-3">
                         <label class="form-label">Gender</label>
-                        <select class="form-select" name="Gender" required>
+                        <select class="form-select" id="Gender" name="Gender" required>
                             <option value="">Select</option>
                             <option>Female</option>
                             <option>Male</option>
                         </select>
                     </div>
 
-                    <!-- Senior Citizen -->
-
                     <div class="mb-3">
                         <label class="form-label">Senior Citizen</label>
-                        <select class="form-select" name="Senior Citizen" required>
+                        <select class="form-select" id="SeniorCitizen" name="Senior Citizen" required>
                             <option value="">Select</option>
                             <option>No</option>
                             <option>Yes</option>
                         </select>
                     </div>
-
-                    <!-- Partner -->
 
                     <div class="mb-3">
                         <label class="form-label">Partner</label>
-                        <select class="form-select" name="Partner" required>
+                        <select class="form-select" id="Partner" name="Partner" required>
                             <option value="">Select</option>
                             <option>No</option>
                             <option>Yes</option>
                         </select>
                     </div>
-
-                    <!-- Dependents -->
 
                     <div class="mb-3">
                         <label class="form-label">Dependents</label>
-                        <select class="form-select" name="Dependents" required>
+                        <select class="form-select" id="Dependents" name="Dependents" required>
                             <option value="">Select</option>
                             <option>No</option>
                             <option>Yes</option>
                         </select>
                     </div>
 
-                    <!-- Tenure -->
-
-                    <div class="mb-3">
+                    <div class="mb-4">
                         <label class="form-label">Tenure Months</label>
-                        <input
-                            type="number"
-                            class="form-control"
-                            name="Tenure Months"
-                            min="0"
-                            max="72"
-                            required>
+                        <input type="number" class="form-control" id="TenureMonths" name="Tenure Months"
+                               min="0" max="72" placeholder="e.g. 12" required>
                     </div>
 
-                    <!-- Phone Service -->
+                    <h5 class="text-primary border-bottom pb-2 mb-3">Services</h5>
 
                     <div class="mb-3">
                         <label class="form-label">Phone Service</label>
-                        <select class="form-select" name="Phone Service" required>
+                        <select class="form-select" id="PhoneService" name="Phone Service" required>
                             <option value="">Select</option>
                             <option>No</option>
                             <option>Yes</option>
                         </select>
                     </div>
 
-                    <!-- Multiple Lines -->
-
                     <div class="mb-3">
                         <label class="form-label">Multiple Lines</label>
-                        <select class="form-select" name="Multiple Lines" required>
+                        <select class="form-select" id="MultipleLines" name="Multiple Lines" required>
                             <option value="">Select</option>
                             <option>No</option>
                             <option>No phone service</option>
@@ -96,11 +90,9 @@
                         </select>
                     </div>
 
-                    <!-- Internet Service -->
-
                     <div class="mb-3">
                         <label class="form-label">Internet Service</label>
-                        <select class="form-select" name="Internet Service" required>
+                        <select class="form-select" id="InternetService" name="Internet Service" required>
                             <option value="">Select</option>
                             <option>DSL</option>
                             <option>Fiber optic</option>
@@ -108,58 +100,49 @@
                         </select>
                     </div>
 
-                    <!-- Online Security -->
-
                     <div class="mb-3">
                         <label class="form-label">Online Security</label>
-                        <select class="form-select" name="Online Security" required>
+                        <select class="form-select" id="OnlineSecurity" name="Online Security" required>
                             <option value="">Select</option>
                             <option>No</option>
                             <option>No internet service</option>
                             <option>Yes</option>
                         </select>
                     </div>
-
-                    <!-- Online Backup -->
 
                     <div class="mb-3">
                         <label class="form-label">Online Backup</label>
-                        <select class="form-select" name="Online Backup" required>
+                        <select class="form-select" id="OnlineBackup" name="Online Backup" required>
                             <option value="">Select</option>
                             <option>No</option>
                             <option>No internet service</option>
                             <option>Yes</option>
                         </select>
                     </div>
-                                        <!-- Device Protection -->
 
                     <div class="mb-3">
                         <label class="form-label">Device Protection</label>
-                        <select class="form-select" name="Device Protection" required>
+                        <select class="form-select" id="DeviceProtection" name="Device Protection" required>
                             <option value="">Select</option>
                             <option>No</option>
                             <option>No internet service</option>
                             <option>Yes</option>
                         </select>
                     </div>
-
-                    <!-- Tech Support -->
 
                     <div class="mb-3">
                         <label class="form-label">Tech Support</label>
-                        <select class="form-select" name="Tech Support" required>
+                        <select class="form-select" id="TechSupport" name="Tech Support" required>
                             <option value="">Select</option>
                             <option>No</option>
                             <option>No internet service</option>
                             <option>Yes</option>
                         </select>
                     </div>
-
-                    <!-- Streaming TV -->
 
                     <div class="mb-3">
                         <label class="form-label">Streaming TV</label>
-                        <select class="form-select" name="Streaming TV" required>
+                        <select class="form-select" id="StreamingTV" name="Streaming TV" required>
                             <option value="">Select</option>
                             <option>No</option>
                             <option>No internet service</option>
@@ -167,11 +150,9 @@
                         </select>
                     </div>
 
-                    <!-- Streaming Movies -->
-
-                    <div class="mb-3">
+                    <div class="mb-4">
                         <label class="form-label">Streaming Movies</label>
-                        <select class="form-select" name="Streaming Movies" required>
+                        <select class="form-select" id="StreamingMovies" name="Streaming Movies" required>
                             <option value="">Select</option>
                             <option>No</option>
                             <option>No internet service</option>
@@ -179,11 +160,11 @@
                         </select>
                     </div>
 
-                    <!-- Contract -->
+                    <h5 class="text-primary border-bottom pb-2 mb-3">Billing & Contract</h5>
 
                     <div class="mb-3">
                         <label class="form-label">Contract</label>
-                        <select class="form-select" name="Contract" required>
+                        <select class="form-select" id="Contract" name="Contract" required>
                             <option value="">Select</option>
                             <option>Month-to-month</option>
                             <option>One year</option>
@@ -191,22 +172,18 @@
                         </select>
                     </div>
 
-                    <!-- Paperless Billing -->
-
                     <div class="mb-3">
                         <label class="form-label">Paperless Billing</label>
-                        <select class="form-select" name="Paperless Billing" required>
+                        <select class="form-select" id="PaperlessBilling" name="Paperless Billing" required>
                             <option value="">Select</option>
                             <option>No</option>
                             <option>Yes</option>
                         </select>
                     </div>
 
-                    <!-- Payment Method -->
-
                     <div class="mb-3">
                         <label class="form-label">Payment Method</label>
-                        <select class="form-select" name="Payment Method" required>
+                        <select class="form-select" id="PaymentMethod" name="Payment Method" required>
                             <option value="">Select</option>
                             <option>Bank transfer (automatic)</option>
                             <option>Credit card (automatic)</option>
@@ -215,40 +192,22 @@
                         </select>
                     </div>
 
-                    <!-- Monthly Charges -->
-
                     <div class="mb-3">
                         <label class="form-label">Monthly Charges</label>
-                        <input
-                            type="number"
-                            step="0.01"
-                            class="form-control"
-                            name="Monthly Charges"
-                            placeholder="e.g. 75.50"
-                            required>
+                        <input type="number" step="0.01" class="form-control" id="MonthlyCharges"
+                               name="Monthly Charges" placeholder="e.g. 75.50" required>
                     </div>
-
-                    <!-- Total Charges -->
 
                     <div class="mb-4">
                         <label class="form-label">Total Charges</label>
-                        <input
-                            type="number"
-                            step="0.01"
-                            class="form-control"
-                            name="Total Charges"
-                            placeholder="e.g. 2500.75"
-                            required>
+                        <input type="number" step="0.01" class="form-control" id="TotalCharges"
+                               name="Total Charges" placeholder="e.g. 2500.75" required>
                     </div>
 
-                    <!-- Submit Button -->
-
                     <div class="text-center">
-
                         <button type="submit" class="btn btn-primary px-5 py-2">
                             Predict Churn
                         </button>
-
                     </div>
 
                 </form>
@@ -260,5 +219,31 @@
     </div>
 
 </div>
+
+<script>
+function fillSample(type) {
+    const churn = {
+        Gender: "Female", SeniorCitizen: "No", Partner: "No", Dependents: "No",
+        TenureMonths: 2, PhoneService: "Yes", MultipleLines: "No",
+        InternetService: "Fiber optic", OnlineSecurity: "No", OnlineBackup: "No",
+        DeviceProtection: "No", TechSupport: "No", StreamingTV: "No", StreamingMovies: "No",
+        Contract: "Month-to-month", PaperlessBilling: "Yes", PaymentMethod: "Electronic check",
+        MonthlyCharges: 95.50, TotalCharges: 191.00
+    };
+    const loyal = {
+        Gender: "Male", SeniorCitizen: "No", Partner: "Yes", Dependents: "Yes",
+        TenureMonths: 60, PhoneService: "Yes", MultipleLines: "Yes",
+        InternetService: "DSL", OnlineSecurity: "Yes", OnlineBackup: "Yes",
+        DeviceProtection: "Yes", TechSupport: "Yes", StreamingTV: "Yes", StreamingMovies: "Yes",
+        Contract: "Two year", PaperlessBilling: "No", PaymentMethod: "Bank transfer (automatic)",
+        MonthlyCharges: 65.00, TotalCharges: 3900.00
+    };
+    const data = type === "churn" ? churn : loyal;
+    for (const id in data) {
+        const el = document.getElementById(id);
+        if (el) el.value = data[id];
+    }
+}
+</script>
 
 {% endblock %}

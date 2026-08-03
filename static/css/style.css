@@ -1,252 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
 /* ---------- General ---------- */
 
 body{
-
     margin:0;
-
-    background:#F4F5F7;
-
-    font-family:"Segoe UI",Tahoma,sans-serif;
-
-    color:#2F2F2F;
-
+    background:#F6F5F1;
+    font-family:"Inter",sans-serif;
+    color:#33312E;
 }
 
 /* ---------- Navigation ---------- */
 
 .navbar{
-
     background:#FFFFFF;
-
-    border-bottom:1px solid #D8DDE3;
-
-    padding:14px 0;
-
+    border-bottom:2px solid #1F3A5F;
+    padding:16px 0;
 }
 
 .navbar-brand{
-
-    font-size:22px;
-
-    font-weight:600;
-
-    color:#2C5A85 !important;
-
+    font-family:"Bricolage Grotesque",sans-serif;
+    font-size:21px;
+    font-weight:700;
+    color:#1F3A5F !important;
+    letter-spacing:-0.3px;
 }
 
 .nav-link{
-
-    color:#444 !important;
-
-    margin-left:20px;
-
-    font-size:15px;
-
+    color:#5B5850 !important;
+    margin-left:22px;
+    font-size:14px;
+    font-weight:500;
 }
 
 .nav-link:hover{
-
-    color:#2C5A85 !important;
-
+    color:#B5502F !important;
 }
 
 /* ---------- Headings ---------- */
 
 h1{
-
-    font-size:34px;
-
-    font-weight:600;
-
-    margin-bottom:18px;
-
+    font-family:"Bricolage Grotesque",sans-serif;
+    font-size:36px;
+    font-weight:700;
+    letter-spacing:-0.5px;
+    margin-bottom:16px;
+    color:#1F3A5F;
 }
 
 h2{
-
-    font-size:24px;
-
-    margin-bottom:18px;
-
+    font-family:"Bricolage Grotesque",sans-serif;
+    font-size:22px;
+    font-weight:600;
+    margin-bottom:16px;
+    color:#1F3A5F;
 }
 
 h3{
+    font-family:"Bricolage Grotesque",sans-serif;
+    font-size:19px;
+    font-weight:600;
+}
 
-    font-size:20px;
-
+h5{
+    font-family:"Bricolage Grotesque",sans-serif;
+    font-weight:600;
+    color:#B5502F;
 }
 
 /* ---------- Paragraph ---------- */
 
 p{
-
-    font-size:16px;
-
+    font-size:15.5px;
     line-height:1.7;
-
-    color:#555;
-
+    color:#5B5850;
 }
 
 /* ---------- Cards ---------- */
 
 .card{
-
     background:white;
-
-    border:1px solid #D8DDE3;
-
-    border-radius:8px;
-
+    border:1px solid #E4E1D8;
+    border-radius:3px;
     padding:25px;
-
-    box-shadow:0 2px 5px rgba(0,0,0,.05);
-
+    box-shadow:none;
 }
 
-/* ---------- Button ---------- */
-
-.btn-custom{
-
-    background:#2C5A85;
-
-    color:white;
-
-    padding:10px 20px;
-
-    border:none;
-
-    border-radius:5px;
-
+.card h3{
+    font-size:17px;
+    color:#1F3A5F;
+    margin-bottom:8px;
 }
 
-.btn-custom:hover{
+.card p{
+    margin:0;
+}
 
-    background:#23496C;
+.card h2{
+    font-size:19px;
+    color:#1F3A5F;
+    margin-bottom:20px;
+    padding-bottom:10px;
+    border-bottom:2px solid #B5502F;
+    display:inline-block;
+}
 
-    color:white;
+/* ---------- Buttons ---------- */
 
+.btn-custom,
+.btn-primary{
+    background:#B5502F !important;
+    color:white !important;
+    padding:10px 22px;
+    border:none !important;
+    border-radius:3px;
+    text-decoration:none;
+    display:inline-block;
+    font-weight:500;
+    box-shadow:none !important;
+}
+
+.btn-custom:hover,
+.btn-primary:hover{
+    background:#963F22 !important;
+}
+
+.btn-outline-danger,
+.btn-outline-success{
+    border-radius:3px;
+    font-weight:500;
 }
 
 /* ---------- Footer ---------- */
 
 footer{
-
-    background:white;
-
-    border-top:1px solid #D8DDE3;
-
+    background:#FFFFFF;
+    border-top:2px solid #1F3A5F;
     padding:25px 0;
-
     text-align:center;
-
 }
 
 footer p{
-
     margin:4px;
-
-    font-size:14px;
-
-}
-.card h3{
-
-    font-size:18px;
-
-    color:#2C5A85;
-
-    margin-bottom:10px;
-
-}
-
-.card p{
-
-    margin:0;
-
-}
-
-.btn-custom{
-
-    text-decoration:none;
-
-    display:inline-block;
-
+    font-size:13.5px;
+    color:#8A8778;
 }
 
 main{
-
     min-height:70vh;
-
 }
-/* Form */
+
+/* ---------- Form ---------- */
 
 .form-label{
     font-weight:600;
-    font-size:14px;
-    color:#444;
+    font-size:13.5px;
+    color:#5B5850;
+    text-transform:uppercase;
+    letter-spacing:0.4px;
 }
 
 .form-control,
 .form-select{
-    border:1px solid #ced4da;
-    border-radius:5px;
+    border:1px solid #D5D1C4;
+    border-radius:3px;
     font-size:15px;
     padding:9px 12px;
 }
 
 .form-control:focus,
 .form-select:focus{
-    border-color:#2C5A85;
+    border-color:#1F3A5F;
     box-shadow:none;
 }
 
-.card h2{
-    font-size:20px;
-    color:#2C5A85;
-    margin-bottom:20px;
-    padding-bottom:8px;
-    border-bottom:1px solid #e5e5e5;
-}
-/* ==========================
-   Result Page
-========================== */
+/* ---------- Result Page ---------- */
 
 .result-card{
-
     padding:30px;
-
 }
 
 .result-table{
-
     margin-bottom:0;
-
 }
 
 .result-table th{
-
     width:35%;
-
-    color:#2C5A85;
-
+    color:#1F3A5F;
     font-weight:600;
-
 }
 
 .status{
-
-    font-weight:600;
-
+    font-weight:700;
 }
 
 .stay{
-
-    color:#1E7E34;
-
+    color:#3E7A4C;
 }
 
 .churn{
-
-    color:#C0392B;
-
+    color:#B5502F;
 }
